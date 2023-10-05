@@ -12,7 +12,7 @@ class Bootstrapper
     public static function init(Initializer $initializer)
     {
         // Set up DI container
-        Container::init($initializer->getContainerConfig(), $initializer->getClassDefinitions());
+        Container::init($initializer->getClassDefinitions());
 
         if ($initializer->requirementsMet()) {
             // Initialize initializer

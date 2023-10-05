@@ -12,6 +12,14 @@
         {
             "type": "vcs",
             "url": "https://github.com/rooted-phoenix/tests.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/rooted-phoenix/di.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/rooted-phoenix/utils.git"
         }
     ],
     "autoload": {
@@ -39,6 +47,7 @@
         }
     },
     "require": {
-        "php-di/php-di": "^7.0"
+        "phoenix/utils": "dev-phx-38/core-repository-setup",
+        "phoenix/di": "dev-phx-38/core-repository-setup"
     }
 }
