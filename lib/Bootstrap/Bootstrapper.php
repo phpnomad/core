@@ -5,13 +5,14 @@ namespace Phoenix\Core\Bootstrap;
 use Phoenix\Core\Bootstrap\Interfaces\Initializer;
 use Phoenix\Core\Container;
 use Phoenix\Core\Events\BasicEvent;
+use Phoenix\Core\Events\Events;
 
 class Bootstrapper
 {
-    public static function init(Initializer $initializer, string $integration)
+    public static function init(Initializer $initializer)
     {
         // Set up DI container
-        Container::init($initializer->getContainerConfig(), $integration);
+        Container::init($initializer->getContainerConfig(), $initializer->getClassDefinitions());
 
         if ($initializer->requirementsMet()) {
             // Initialize initializer

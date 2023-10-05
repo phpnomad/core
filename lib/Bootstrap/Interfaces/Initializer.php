@@ -8,4 +8,6 @@ interface Initializer
     public function init(): void;
 
     public function getContainerConfig(): array;
+
+    public function getClassDefinitions(): array;
 }

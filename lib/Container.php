@@ -4,10 +4,9 @@ namespace Phoenix\Core;
 use DI\ContainerBuilder;
 use DI\DependencyException;
 use DI\NotFoundException;
-use Phoenix\Core\Bootstrap\Interfaces\Integration;
+use Phoenix\Core\Bootstrap\Interfaces\EventStrategy;
 use Phoenix\Core\Traits\WithInstance;
 use DI\Container as CoreContainer;
-use function DI\create;
 
 /**
  * Decorator, and single instance of this plugin's DI container.
@@ -18,42 +17,46 @@ class Container
 
     private CoreContainer $container;
     protected array $configs;
-    protected string $integration;
+    protected array $classDefinitions;
 
-    public function __construct(array $configs, string $integration)
+    public function __construct(array $configs, array $classDefinitions)
     {
         $this->configs = $configs;
-        $this->integration = $integration;
+        $this->classDefinitions = $classDefinitions;
         $this->container = $this->buildContainer();
     }
 
     protected function buildContainer(): CoreContainer
     {
-        return (new ContainerBuilder())
-            ->addDefinitions([
-                'configuration' => array_merge_recursive(...$this->configs),
-                Integration::class => create($this->integration)
-            ])
-            ->build();
+        $config = $this->classDefinitions;
+        $config['configuration'] = array_merge_recursive(...$this->configs);
+
+        //TODO: DETERMINE WHAT TO DO WITH EXCEPTIONS.
+        try {
+            return (new ContainerBuilder())
+                ->addDefinitions($config)
+                ->build();
+        } catch (\Exception $e) {
+        }
     }
 
     /**
-     * @return Integration
+     * @return EventStrategy
      */
-    public function getIntegration(): Integration
+    public static function events(): EventStrategy
     {
         //TODO: FIRE PHX EVENTS AND EXCEPTIONS HERE.
         try {
-            return $this->container->get(Integration::class);
+            return static::instance()->container->get(EventStrategy::class);
         } catch (DependencyException $e) {
         } catch (NotFoundException $e) {
         }
     }
 
-    public static function init(array $configs, string $integration): Container
+    public static function init(array $configs, array $classDefinitions): Container
     {
         if (!isset(static::$instance)) {
-            static::$instance = new static($configs, $integration);
+            static::$instance = new static($configs, $classDefinitions);
         }
 
         return static::instance();

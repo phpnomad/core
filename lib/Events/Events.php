@@ -9,16 +9,16 @@ class Events
 {
     public static function broadcast(Event $event): void
     {
-        Container::instance()->getIntegration()->getEventStrategy()->broadcast($event);
+        Container::events()->broadcast($event);
     }
 
     public static function attach(string $event, callable $action, ?int $priority = null): void
     {
-        Container::instance()->getIntegration()->getEventStrategy()->attach($event, $action, $priority);
+        Container::events()->attach($event, $action, $priority);
     }
 
     public static function detach(string $event, callable $action, ?int $priority = null): void
     {
-        Container::instance()->getIntegration()->getEventStrategy()->detach($event, $action, $priority);
+        Container::events()->detach($event, $action, $priority);
     }
 }
