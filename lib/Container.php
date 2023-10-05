@@ -7,6 +7,7 @@ use DI\NotFoundException;
 use Phoenix\Core\Bootstrap\Interfaces\EventStrategy;
 use Phoenix\Core\Traits\WithInstance;
 use DI\Container as CoreContainer;
+use function DI\create;
 
 /**
  * Decorator, and single instance of this plugin's DI container.
@@ -51,6 +52,17 @@ class Container
         } catch (DependencyException $e) {
         } catch (NotFoundException $e) {
         }
+    }
+
+    /**
+     * Create the instance based on the provided abstract.
+     *
+     * @param string $className
+     * @return \DI\Definition\Helper\CreateDefinitionHelper
+     */
+    public static function create(string $className)
+    {
+        return create($className);
     }
 
     public static function init(array $configs, array $classDefinitions): Container
