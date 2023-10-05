@@ -37,5 +37,8 @@
         "allow-plugins": {
             "phpstan/extension-installer": true
         }
+    },
+    "require": {
+        "php-di/php-di": "^7.0"
     }
 }
