@@ -5,8 +5,8 @@ namespace Phoenix\Core\Bootstrap;
 use Phoenix\Core\Bootstrap\Interfaces\Initializer;
 use Phoenix\Core\Container;
 use Phoenix\Core\Events\BootstrapInitializedEvent;
-use Phoenix\Core\Events\Events;
 use Phoenix\Core\Events\RequirementsNotMetEvent;
+use Phoenix\Core\Repositories\Event;
 
 class Bootstrapper
 {
@@ -33,9 +33,9 @@ class Bootstrapper
             // Initialize initializer
             $initializer->init();
 
-            Events::broadcast(new BootstrapInitializedEvent($initializer));
+            Event::broadcast(new BootstrapInitializedEvent($initializer));
         } else {
-            Events::broadcast(new RequirementsNotMetEvent($initializer));
+            Event::broadcast(new RequirementsNotMetEvent($initializer));
         }
     }
 }

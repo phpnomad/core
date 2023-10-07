@@ -2,7 +2,8 @@
 
 namespace Phoenix\Core;
 
-use Phoenix\Core\Bootstrap\Interfaces\EventStrategy;
+use Phoenix\Events\Interfaces\EventStrategy;
+use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Di\Container as CoreContainer;
 
@@ -44,8 +45,11 @@ class Container
      */
     public static function events(): EventStrategy
     {
-        //TODO: Capture this exception.
-        return static::instance()->container->get(EventStrategy::class);
+        try {
+            return static::instance()->container->get(EventStrategy::class);
+        } catch (DiException $e) {
+            //TODO: Capture this exception.
+        }
     }
 
     /**

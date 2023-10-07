@@ -80,6 +80,7 @@
       <path value="$PROJECT_DIR$/vendor" />
       <path value="$PROJECT_DIR$/vendor/phoenix/di" />
       <path value="$PROJECT_DIR$/vendor/phoenix/utils" />
+      <path value="$PROJECT_DIR$/vendor/phoenix/event" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

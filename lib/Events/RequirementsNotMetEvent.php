@@ -3,8 +3,8 @@
 namespace Phoenix\Core\Events;
 
 use Phoenix\Core\Bootstrap\Interfaces\Initializer;
-use Phoenix\Core\Events\Interfaces\Event;
 use Phoenix\Core\Traits\WithInitializer;
+use Phoenix\Events\Interfaces\Event;
 
 class RequirementsNotMetEvent implements Event
 {

@@ -19,6 +19,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/rooted-phoenix/event.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/rooted-phoenix/utils.git"
         }
     ],
@@ -48,6 +52,7 @@
     },
     "require": {
         "phoenix/utils": "dev-phx-38/core-repository-setup",
+        "phoenix/event": "dev-main",
         "phoenix/di": "dev-phx-38/core-repository-setup"
     }
 }
