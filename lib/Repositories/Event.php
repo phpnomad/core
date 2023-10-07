@@ -1,13 +1,13 @@
 <?php
 
-namespace Phoenix\Core\Events;
+namespace Phoenix\Core\Repositories;
 
 use Phoenix\Core\Container;
-use Phoenix\Core\Events\Interfaces\Event;
+use Phoenix\Events\Interfaces\Event as EventObject;
 
-class Events
+class Event
 {
-    public static function broadcast(Event $event): void
+    public static function broadcast(EventObject $event): void
     {
         Container::events()->broadcast($event);
     }
