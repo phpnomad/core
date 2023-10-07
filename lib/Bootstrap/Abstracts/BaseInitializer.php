@@ -13,19 +13,10 @@ abstract class BaseInitializer implements Initializer
     public function init(): void
     {
         try {
-            Config::autoloadConfigFiles('core', $this->getCoreConfigDir());
+            Config::autoloadConfigFiles('core', dirname(__DIR__, 3));
         } catch (ConfigException|DiException $e) {
             //TODO: Log these exceptions
         }
     }
 
-    private function getCoreConfigDir(): string
-    {
-        return implode(DIRECTORY_SEPARATOR, [
-            Str::before(dirname(__DIR__, 3), 'phoenix' . DIRECTORY_SEPARATOR . 'core'),
-            'phoenix',
-            'core',
-            'configuration'
-        ]);
-    }
 }
