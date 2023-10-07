@@ -3,9 +3,21 @@
 namespace Phoenix\Core\Bootstrap\Interfaces;
 interface Initializer
 {
+    /**
+     * Returns true if the requirements have been met.
+     * @return bool
+     */
     public function requirementsMet(): bool;
 
+    /**
+     * Runs general setup actions needed on every request.
+     * @return void
+     */
     public function init(): void;
 
+    /**
+     * Gets the list of class definitions for dependency injection.
+     * @return array
+     */
     public function getClassDefinitions(): array;
 }
