@@ -16,6 +16,9 @@ class Container
     private CoreContainer $container;
     protected array $classDefinitions;
 
+    /**
+     * @param array $classDefinitions
+     */
     public function __construct(array $classDefinitions)
     {
         $this->classDefinitions = $classDefinitions;
