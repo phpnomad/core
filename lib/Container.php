@@ -8,6 +8,7 @@ use Phoenix\Di\Container as CoreContainer;
 
 /**
  * Decorator, and single instance of this plugin's DI container.
+ * @method instance(): static
  */
 class Container
 {
