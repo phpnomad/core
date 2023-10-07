@@ -35,7 +35,7 @@ class Config
      * @param array|string|float|int|bool|null $default Default value to return if this config does not exist.
      * @return array|string|float|int|bool|null
      */
-    public function get(string $key, $default = null)
+    public static function get(string $key, $default = null)
     {
         try {
             return Container::config()->get($key, $default);
