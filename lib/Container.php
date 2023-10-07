@@ -2,6 +2,7 @@
 
 namespace Phoenix\Core;
 
+use Phoenix\Cache\Interfaces\CacheStrategy;
 use Phoenix\Events\Interfaces\EventStrategy;
 use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Traits\WithInstance;
@@ -42,14 +43,29 @@ class Container
 
     /**
      * @return EventStrategy
+     * @throws DiException
      */
     public static function events(): EventStrategy
     {
-        try {
-            return static::instance()->container->get(EventStrategy::class);
-        } catch (DiException $e) {
-            //TODO: Capture this exception.
-        }
+        return static::instance()->container->get(EventStrategy::class);
+    }
+
+    /**
+     * @return ConfigStrategy
+     * @throws DiException
+     */
+    public static function config(): ConfigStrategy
+    {
+        return static::instance()->container->get(ConfigStrategy::class);
+    }
+
+    /**
+     * @return CacheStrategy
+     * @throws DiException
+     */
+    public static function cache(): CacheStrategy
+    {
+        return static::instance()->container->get(CacheStrategy::class);
     }
 
     /**
