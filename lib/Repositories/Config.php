@@ -65,7 +65,7 @@ class Config
     protected static function getCacheStrategy(): ?CacheStrategy
     {
         try {
-            return Container::cache();
+            return Container::objectCache();
         } catch (DiException $e) {
             return null;
         }
