@@ -3,7 +3,6 @@
 namespace Phoenix\Core;
 
 use Phoenix\Cache\Interfaces\CacheStrategy;
-use Phoenix\Cache\Interfaces\InMemoryCacheStrategy;
 use Phoenix\Events\Interfaces\EventStrategy;
 use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Traits\WithInstance;
@@ -61,12 +60,12 @@ class Container
     }
 
     /**
-     * @return InMemoryCacheStrategy
+     * @return CacheStrategy
      * @throws DiException
      */
-    public static function objectCache(): InMemoryCacheStrategy
+    public static function cache(): CacheStrategy
     {
-        return static::instance()->container->get(InMemoryCacheStrategy::class);
+        return static::instance()->container->get(CacheStrategy::class);
     }
 
     /**
