@@ -7,8 +7,10 @@ use Phoenix\Core\Bootstrap\Interfaces\Initializer;
 use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Repositories\Config;
 
-abstract class BaseInitializer implements Initializer
+class BaseInitializer implements Initializer
 {
+    public const REQUIRED_PHP_VERSION = '7.4';
+
     /** @inheritDoc */
     public function init(): void
     {
@@ -23,7 +25,7 @@ abstract class BaseInitializer implements Initializer
     private function setupConfigs()
     {
         try {
-            foreach($this->getConfigDirectories() as $key => $configDirectory) {
+            foreach ($this->getConfigDirectories() as $key => $configDirectory) {
                 Config::autoloadConfigFiles($key, $configDirectory);
             }
         } catch (ConfigException|DiException $e) {
@@ -35,5 +37,17 @@ abstract class BaseInitializer implements Initializer
     public function getConfigDirectories(): array
     {
         return ['core' => dirname(__DIR__, 3)];
+    }
+
+    /** @inheitDoc */
+    public function requirementsMet(): bool
+    {
+        return version_compare(phpversion(), static::REQUIRED_PHP_VERSION, '>=');
+    }
+
+    /** @inheitDoc */
+    public function getClassDefinitions(): array
+    {
+        return [];
     }
 }
