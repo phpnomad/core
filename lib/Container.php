@@ -7,6 +7,7 @@ use Phoenix\Events\Interfaces\EventStrategy;
 use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Di\Container as CoreContainer;
+use Phoenix\Utils\Helpers\Arr;
 
 /**
  * Decorator, and single instance of this plugin's DI container.
@@ -34,8 +35,8 @@ class Container
     {
         $container = new CoreContainer();
 
-        foreach ($this->classDefinitions as $abstract => $concrete) {
-            $container->bind($abstract, $concrete);
+        foreach ($this->classDefinitions as $concrete => $abstracts) {
+            $container->bind($concrete, ...Arr::wrap($abstracts));
         }
 
         return $container;
