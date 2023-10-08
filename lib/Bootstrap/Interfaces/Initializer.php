@@ -20,4 +20,10 @@ interface Initializer
      * @return array
      */
     public function getClassDefinitions(): array;
+
+    /**
+     * Gets the list of configuration files needed for setup on this project
+     * @return array
+     */
+    public function getConfigDirectories(): array;
 }
