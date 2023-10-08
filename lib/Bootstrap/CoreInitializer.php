@@ -1,13 +1,13 @@
 <?php
 
-namespace Phoenix\Core\Bootstrap\Abstracts;
+namespace Phoenix\Core\Bootstrap;
 
 use Phoenix\Config\Exceptions\ConfigException;
 use Phoenix\Core\Bootstrap\Interfaces\Initializer;
 use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Repositories\Config;
 
-class BaseInitializer implements Initializer
+class CoreInitializer implements Initializer
 {
     public const REQUIRED_PHP_VERSION = '7.4';
 
