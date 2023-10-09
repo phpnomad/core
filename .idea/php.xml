@@ -78,6 +78,11 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phoenix" />
       <path value="$PROJECT_DIR$/vendor" />
+      <path value="$PROJECT_DIR$/vendor/phoenix/di" />
+      <path value="$PROJECT_DIR$/vendor/phoenix/utils" />
+      <path value="$PROJECT_DIR$/vendor/phoenix/event" />
+      <path value="$PROJECT_DIR$/vendor/phoenix/config" />
+      <path value="$PROJECT_DIR$/vendor/phoenix/cache" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
