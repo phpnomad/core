@@ -2,21 +2,31 @@
 
 namespace Phoenix\Core\Database\Abstracts;
 
+use Phoenix\Core\Repositories\Config;
 use Phoenix\Database\Interfaces\Table as CoreTable;
 
 abstract class Table implements CoreTable
 {
-    protected const DB_PREFIX = 'phx_';
-
     /** @inheritDoc */
     public function getCacheTtl(): int
     {
         return 604800;
     }
 
+    /**
+     * Retrieves the database table name.
+     *
+     * @return string
+     */
     public function getName(): string
     {
-        return static::DB_PREFIX . $this->getUnprefixedName();
+        $prefix = Config::get('core.general.prefix', '');
+
+        if (!empty($prefix)) {
+            $prefix = $prefix . '_';
+        }
+
+        return $prefix . $this->getUnprefixedName();
     }
 
     /**
