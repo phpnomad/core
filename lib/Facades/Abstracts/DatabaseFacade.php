@@ -3,7 +3,6 @@
 namespace Phoenix\Core\Facades\Abstracts;
 
 use Phoenix\Core\Facades\Facade;
-use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Database\Exceptions\RecordNotFoundException;
 use Phoenix\Database\Interfaces\DatabaseModel;
 use Phoenix\Database\Mutators\Interfaces\QueryMutator;
