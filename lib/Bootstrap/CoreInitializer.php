@@ -2,53 +2,23 @@
 
 namespace Phoenix\Core\Bootstrap;
 
-use Phoenix\Config\Exceptions\ConfigException;
-use Phoenix\Core\Bootstrap\Interfaces\Initializer;
-use Phoenix\Core\Exceptions\DiException;
+use Phoenix\Core\Bootstrap\Interfaces\HasConfigs;
 use Phoenix\Core\Helpers\Str;
-use Phoenix\Core\Repositories\Config;
+use Phoenix\Loader\Interfaces\HasLoadCondition;
 
-class CoreInitializer implements Initializer
+class CoreInitializer implements HasConfigs, HasLoadCondition
 {
     public const REQUIRED_PHP_VERSION = '7.4';
 
-    /** @inheritDoc */
-    public function init(): void
+    /** @inheitDoc */
+    public function shouldLoad(): bool
     {
-        $this->setupConfigs();
-    }
-
-    /**
-     * Sets up the configurations based on the provided directories.
-     *
-     * @return void
-     */
-    private function setupConfigs()
-    {
-        try {
-            foreach ($this->getConfigDirectories() as $key => $configDirectory) {
-                Config::autoloadConfigFiles($key, $configDirectory);
-            }
-        } catch (ConfigException|DiException $e) {
-            //TODO: Log these exceptions
-        }
+        return version_compare(phpversion(), static::REQUIRED_PHP_VERSION, '>=');
     }
 
     /** @inheritDoc */
     public function getConfigDirectories(): array
     {
         return ['core' => Str::append(dirname(__DIR__, 3), '/') . 'configuration'];
-    }
-
-    /** @inheitDoc */
-    public function requirementsMet(): bool
-    {
-        return version_compare(phpversion(), static::REQUIRED_PHP_VERSION, '>=');
-    }
-
-    /** @inheitDoc */
-    public function getClassDefinitions(): array
-    {
-        return [];
     }
 }

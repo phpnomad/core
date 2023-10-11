@@ -31,6 +31,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/rooted-phoenix/loader.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/rooted-phoenix/rest.git"
         },
         {
@@ -74,6 +78,7 @@
         "phoenix/di": "dev-main",
         "phoenix/db": "dev-main",
         "phoenix/rest": "dev-main",
+        "phoenix/loader": "dev-main",
         "ext-json": "*"
     }
 }
