@@ -34,7 +34,7 @@ class Cache extends Facade
      */
     public static function get(string $key)
     {
-        return static::instance()->getContainedInstance()->load($key);
+        return static::instance()->getContainedInstance()->get($key);
     }
 
     /**
@@ -46,7 +46,7 @@ class Cache extends Facade
      */
     public static function set(string $key, $value, ?int $ttl): void
     {
-        static::instance()->getContainedInstance()->load($key, $value, $ttl);
+        static::instance()->getContainedInstance()->set($key, $value, $ttl);
     }
 
     protected function abstractInstance(): string
