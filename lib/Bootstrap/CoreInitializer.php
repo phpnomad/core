@@ -2,13 +2,12 @@
 
 namespace Phoenix\Core\Bootstrap;
 
-use Phoenix\Core\Bootstrap\Interfaces\HasConfigs;
 use Phoenix\Core\Bootstrap\Interfaces\HasFacades;
 use Phoenix\Core\Facades\Event;
-use Phoenix\Core\Helpers\Str;
+use Phoenix\Utils\Helpers\Str;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
 
-class CoreInitializer implements HasConfigs, HasLoadCondition, HasFacades
+class CoreInitializer implements, HasLoadCondition, HasFacades
 {
     public const REQUIRED_PHP_VERSION = '7.4';
 
