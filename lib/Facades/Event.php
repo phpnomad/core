@@ -1,17 +1,21 @@
 <?php
 
-namespace Phoenix\Core\Repositories;
+namespace Phoenix\Core\Facades;
 
-use Phoenix\Core\Container;
+use Phoenix\Core\ContainerBuilder;
 use Phoenix\Core\Exceptions\DiException;
+use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Events\Interfaces\Event as EventObject;
+use Phoenix\Events\Interfaces\EventStrategy;
 
-class Event
+class Event extends Facade
 {
+    use WithInstance;
+
     public static function broadcast(EventObject $event): void
     {
         try {
-            Container::events()->broadcast($event);
+            static::instance()->getContainedInstance()->broadcast($event);
         } catch (DiException $e) {
             //TODO: CATCH THIS
         }
@@ -20,7 +24,7 @@ class Event
     public static function attach(string $event, callable $action, ?int $priority = null): void
     {
         try {
-            Container::events()->attach($event, $action, $priority);
+            static::instance()->getContainedInstance()->attach($event, $action, $priority);
         } catch (DiException $e) {
             //TODO: CATCH THIS
         }
@@ -29,9 +33,15 @@ class Event
     public static function detach(string $event, callable $action, ?int $priority = null): void
     {
         try {
-            Container::events()->detach($event, $action, $priority);
+            static::instance()->getContainedInstance()->detach($event, $action, $priority);
         } catch (DiException $e) {
             //TODO: CATCH THIS
         }
+    }
+
+    /** @inheritDoc */
+    protected function abstractInstance(): string
+    {
+        return EventStrategy::class;
     }
 }

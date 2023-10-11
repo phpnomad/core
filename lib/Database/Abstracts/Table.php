@@ -2,7 +2,7 @@
 
 namespace Phoenix\Core\Database\Abstracts;
 
-use Phoenix\Core\Repositories\Config;
+use Phoenix\Core\Facades\Config;
 use Phoenix\Database\Interfaces\Table as CoreTable;
 
 abstract class Table implements CoreTable

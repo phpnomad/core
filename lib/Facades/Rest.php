@@ -1,14 +1,18 @@
 <?php
 
-namespace Phoenix\Core\Repositories;
+namespace Phoenix\Core\Facades;
 
-use Phoenix\Core\Container;
+use Phoenix\Core\ContainerBuilder;
 use Phoenix\Core\Exceptions\DiException;
+use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Rest\Interfaces\Handler;
+use Phoenix\Rest\Interfaces\RestStrategy;
 use Phoenix\Rest\Interfaces\Validation;
 
-class Rest
+class Rest extends Facade
 {
+    use WithInstance;
+
     /**
      * Register a GET route with the router.
      *
@@ -20,7 +24,7 @@ class Rest
     public static function get(string $endpoint, array $validations, Handler $handler): void
     {
         try {
-            Container::rest()->get($endpoint, $validations, $handler);
+            static::instance()->getContainedInstance()->get($endpoint, $validations, $handler);
         } catch (DiException $e) {
         }
     }
@@ -36,7 +40,7 @@ class Rest
     public static function post(string $endpoint, array $validations, Handler $handler): void
     {
         try {
-            Container::rest()->post($endpoint, $validations, $handler);
+            static::instance()->getContainedInstance()->post($endpoint, $validations, $handler);
         } catch (DiException $e) {
         }
     }
@@ -52,7 +56,7 @@ class Rest
     public static function put(string $endpoint, array $validations, Handler $handler): void
     {
         try {
-            Container::rest()->put($endpoint, $validations, $handler);
+            static::instance()->getContainedInstance()->put($endpoint, $validations, $handler);
         } catch (DiException $e) {
         }
     }
@@ -68,7 +72,7 @@ class Rest
     public static function delete(string $endpoint, array $validations, Handler $handler): void
     {
         try {
-            Container::rest()->delete($endpoint, $validations, $handler);
+            static::instance()->getContainedInstance()->delete($endpoint, $validations, $handler);
         } catch (DiException $e) {
         }
     }
@@ -84,7 +88,7 @@ class Rest
     public static function patch(string $endpoint, array $validations, Handler $handler): void
     {
         try {
-            Container::rest()->patch($endpoint, $validations, $handler);
+            static::instance()->getContainedInstance()->patch($endpoint, $validations, $handler);
         } catch (DiException $e) {
         }
     }
@@ -100,8 +104,13 @@ class Rest
     public static function options(string $endpoint, array $validations, Handler $handler): void
     {
         try {
-            Container::rest()->options($endpoint, $validations, $handler);
+            static::instance()->getContainedInstance()->options($endpoint, $validations, $handler);
         } catch (DiException $e) {
         }
+    }
+
+    protected function abstractInstance(): string
+    {
+        return RestStrategy::class;
     }
 }

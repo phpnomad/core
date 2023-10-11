@@ -19,10 +19,6 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/rooted-phoenix/config.git"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/rooted-phoenix/cache.git"
         },
         {
@@ -73,7 +69,6 @@
     "require": {
         "phoenix/utils": "dev-main",
         "phoenix/event": "dev-main",
-        "phoenix/config": "dev-main",
         "phoenix/cache": "dev-main",
         "phoenix/di": "dev-main",
         "phoenix/db": "dev-main",
