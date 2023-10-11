@@ -3,6 +3,7 @@
 namespace Phoenix\Core\Facades\Abstracts;
 
 use Phoenix\Core\Facades\Facade;
+use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Database\Exceptions\RecordNotFoundException;
 use Phoenix\Database\Interfaces\DatabaseModel;
 use Phoenix\Database\Mutators\Interfaces\QueryMutator;
@@ -19,9 +20,9 @@ abstract class DatabaseFacade extends Facade
      * @return DatabaseModel
      * @throws RecordNotFoundException
      */
-    public function getById(int $id): DatabaseModel
+    public static function getById(int $id): DatabaseModel
     {
-        return $this->getContainedInstance()->getById($id);
+        return static::instance()->getContainedInstance()->getById($id);
     }
 
     /**
@@ -30,9 +31,9 @@ abstract class DatabaseFacade extends Facade
      * @param int $id
      * @return void
      */
-    public function delete(int $id): void
+    public static function delete(int $id): void
     {
-        $this->getContainedInstance()->delete($id);
+        static::instance()->getContainedInstance()->delete($id);
     }
 
     /**
@@ -40,9 +41,9 @@ abstract class DatabaseFacade extends Facade
      * @return void
      * @throws RecordNotFoundException
      */
-    public function save(array $data): int
+    public static function save(array $data): int
     {
-        $this->getContainedInstance()->save($data);
+        static::instance()->getContainedInstance()->save($data);
     }
 
     /**
@@ -51,17 +52,22 @@ abstract class DatabaseFacade extends Facade
      * @param QueryMutator ...$args List of args used to make this query.
      * @return TModel[]|int[]
      */
-    public function query(QueryMutator ...$args): array
+    public static function query(QueryMutator ...$args): array
     {
-        return $this->getContainedInstance()->query(...$args);
+        return static::instance()->getContainedInstance()->query(...$args);
     }
 
     /**
      * @param QueryMutator ...$args
      * @return int
      */
-    public function count(QueryMutator ...$args): int
+    public static function count(QueryMutator ...$args): int
     {
-        return $this->getContainedInstance()->count(...$args);
+        return static::instance()->getContainedInstance()->count(...$args);
     }
+
+    /**
+     * @return $this
+     */
+    abstract public static function instance();
 }
