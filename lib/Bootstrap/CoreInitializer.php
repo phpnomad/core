@@ -5,6 +5,7 @@ namespace Phoenix\Core\Bootstrap;
 use Phoenix\Config\Exceptions\ConfigException;
 use Phoenix\Core\Bootstrap\Interfaces\Initializer;
 use Phoenix\Core\Exceptions\DiException;
+use Phoenix\Core\Helpers\Str;
 use Phoenix\Core\Repositories\Config;
 
 class CoreInitializer implements Initializer
@@ -36,7 +37,7 @@ class CoreInitializer implements Initializer
     /** @inheritDoc */
     public function getConfigDirectories(): array
     {
-        return ['core' => dirname(__DIR__, 3)];
+        return ['core' => Str::append(dirname(__DIR__, 3), '/') . 'configuration'];
     }
 
     /** @inheitDoc */
