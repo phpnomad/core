@@ -1,6 +1,6 @@
 <?php
 
-namespace Phoenix\Core\Facades;
+namespace Phoenix\Core\Facades\Abstracts;
 
 use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Di\Container;

@@ -3,6 +3,7 @@
 namespace Phoenix\Core\Facades;
 
 use Phoenix\Core\Exceptions\DiException;
+use Phoenix\Core\Facades\Abstracts\Facade;
 use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Events\Interfaces\Event as EventObject;
 use Phoenix\Events\Interfaces\EventStrategy;

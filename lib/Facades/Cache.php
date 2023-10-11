@@ -4,6 +4,7 @@ namespace Phoenix\Core\Facades;
 
 use Phoenix\Cache\Exceptions\CachedItemNotFoundException;
 use Phoenix\Cache\Interfaces\CacheStrategy;
+use Phoenix\Core\Facades\Abstracts\Facade;
 use Phoenix\Core\Traits\WithInstance;
 
 class Cache extends Facade

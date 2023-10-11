@@ -3,7 +3,9 @@
 namespace Phoenix\Core\Bootstrap;
 
 use Phoenix\Core\Bootstrap\Interfaces\HasFacades;
+use Phoenix\Core\Facades\Cache;
 use Phoenix\Core\Facades\Event;
+use Phoenix\Core\Facades\Rest;
 use Phoenix\Utils\Helpers\Str;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
 
@@ -26,7 +28,9 @@ class CoreInitializer implements HasLoadCondition, HasFacades
     public function getFacades(): array
     {
         return [
-            Event::instance()
+            Cache::instance(),
+            Event::instance(),
+            Rest::instance()
         ];
     }
 }

@@ -2,11 +2,10 @@
 
 namespace Phoenix\Core\Facades\Abstracts;
 
-use Phoenix\Core\Facades\Facade;
+use Phoenix\Core\Database\Abstracts\DatabaseRepository;
 use Phoenix\Database\Exceptions\RecordNotFoundException;
 use Phoenix\Database\Interfaces\DatabaseModel;
 use Phoenix\Database\Mutators\Interfaces\QueryMutator;
-use Phoenix\Core\Database\Abstracts\DatabaseRepository;
 
 /**
  * @template TModel of DatabaseModel
