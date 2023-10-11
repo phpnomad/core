@@ -2,7 +2,6 @@
 
 namespace Phoenix\Core\Facades;
 
-use Phoenix\Core\ContainerBuilder;
 use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Rest\Interfaces\Handler;

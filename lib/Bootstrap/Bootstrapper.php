@@ -4,7 +4,6 @@ namespace Phoenix\Core\Bootstrap;
 
 use Phoenix\Core\Bootstrap\Interfaces\HasClassDefinitions;
 use Phoenix\Core\Bootstrap\Interfaces\HasFacades;
-use Phoenix\Core\ContainerBuilder;
 use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Di\Container;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
@@ -16,7 +15,6 @@ class Bootstrapper
     use WithInstance;
 
     protected Container $container;
-    protected const CORE_CONFIG_PREFIX = 'phx-core-config';
 
     protected function __construct()
     {
