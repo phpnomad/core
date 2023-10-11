@@ -264,12 +264,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/rest.git",
-                "reference": "96205d17f08232dacf0bf2760b315e12be055dfe"
+                "reference": "a157f801a8a4dbfdd916db2063dba60d5c66a9fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/rest/zipball/96205d17f08232dacf0bf2760b315e12be055dfe",
-                "reference": "96205d17f08232dacf0bf2760b315e12be055dfe",
+                "url": "https://api.github.com/repos/rooted-phoenix/rest/zipball/a157f801a8a4dbfdd916db2063dba60d5c66a9fc",
+                "reference": "a157f801a8a4dbfdd916db2063dba60d5c66a9fc",
                 "shasum": ""
             },
             "require-dev": {
@@ -306,7 +306,7 @@
                 "source": "https://github.com/rooted-phoenix/rest/tree/main",
                 "issues": "https://github.com/rooted-phoenix/rest/issues"
             },
-            "time": "2023-10-11T01:34:15+00:00"
+            "time": "2023-10-11T02:18:39+00:00"
         },
         {
             "name": "phoenix/utils",
