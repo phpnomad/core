@@ -7,6 +7,7 @@ use Phoenix\Events\Interfaces\EventStrategy;
 use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Di\Container as CoreContainer;
+use Phoenix\Rest\Interfaces\RestStrategy;
 use Phoenix\Utils\Helpers\Arr;
 
 /**
@@ -67,6 +68,15 @@ class Container
     public static function cache(): CacheStrategy
     {
         return static::instance()->container->get(CacheStrategy::class);
+    }
+
+    /**
+     * @return RestStrategy
+     * @throws DiException
+     */
+    public static function rest(): RestStrategy
+    {
+        return static::instance()->container->get(RestStrategy::class);
     }
 
     /**

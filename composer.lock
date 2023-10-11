@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50554098e86627f61dd5b87689d5238b",
+    "content-hash": "bba5b4ce2ed2e8e60e8443080154bc03",
     "packages": [
         {
             "name": "phoenix/cache",
@@ -257,6 +257,56 @@
                 "issues": "https://github.com/rooted-phoenix/event/issues"
             },
             "time": "2023-10-07T15:28:55+00:00"
+        },
+        {
+            "name": "phoenix/rest",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:rooted-phoenix/rest.git",
+                "reference": "96205d17f08232dacf0bf2760b315e12be055dfe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rooted-phoenix/rest/zipball/96205d17f08232dacf0bf2760b315e12be055dfe",
+                "reference": "96205d17f08232dacf0bf2760b315e12be055dfe",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phoenix/tests": "^0.1.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phoenix\\Rest\\": "lib/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Phoenix\\Rest\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "php-cs-fixer": [
+                    "php-cs-fixer fix"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Standiford",
+                    "email": "alex@standiford.us"
+                }
+            ],
+            "homepage": "https://github.com/phoenix/core",
+            "support": {
+                "source": "https://github.com/rooted-phoenix/rest/tree/main",
+                "issues": "https://github.com/rooted-phoenix/rest/issues"
+            },
+            "time": "2023-10-11T01:34:15+00:00"
         },
         {
             "name": "phoenix/utils",
@@ -4151,7 +4201,8 @@
         "phoenix/config": 20,
         "phoenix/cache": 20,
         "phoenix/di": 20,
-        "phoenix/db": 20
+        "phoenix/db": 20,
+        "phoenix/rest": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

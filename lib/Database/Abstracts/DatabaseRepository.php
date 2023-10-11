@@ -3,7 +3,7 @@
 namespace Phoenix\Core\Database\Abstracts;
 
 use Phoenix\Cache\Interfaces\InMemoryCacheStrategy;
-use Phoenix\Cache\Repository\Cache;
+use Phoenix\Core\Repositories;
 use Phoenix\Core\Repositories\Config;
 use Phoenix\Database\Exceptions\DatabaseErrorException;
 use Phoenix\Database\Exceptions\RecordNotFoundException;

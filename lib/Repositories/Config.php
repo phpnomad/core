@@ -3,7 +3,6 @@
 namespace Phoenix\Core\Repositories;
 
 use Phoenix\Cache\Interfaces\CacheStrategy;
-use Phoenix\Cache\Repository\Cache;
 use Phoenix\Config\Exceptions\ConfigException;
 use Phoenix\Core\Container;
 use Phoenix\Core\Exceptions\DiException;
@@ -53,8 +52,8 @@ class Config
     protected static function getFileData(string $namespace, string $file): array
     {
         return Cache::use(static::getCacheStrategy())
-            ->load(static::CORE_CONFIG_PREFIX . '__' . $namespace . '__' . $file, function () use ($file) {
-                return ['namespace' => json_decode(file_get_contents($file))];
+            ->load(static::CORE_CONFIG_PREFIX . '__' . $namespace . '__' . $file, function () use ($file, $namespace) {
+                return [$namespace => json_decode(file_get_contents($file))];
             });
     }
 
