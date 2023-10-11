@@ -7,7 +7,7 @@ use Phoenix\Core\Facades\Event;
 use Phoenix\Utils\Helpers\Str;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
 
-class CoreInitializer implements, HasLoadCondition, HasFacades
+class CoreInitializer implements HasLoadCondition, HasFacades
 {
     public const REQUIRED_PHP_VERSION = '7.4';
 

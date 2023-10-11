@@ -49,7 +49,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phoenix/di" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phoenix/utils" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phoenix/event" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phoenix/config" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phoenix/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phoenix/rest" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phoenix/loader" />

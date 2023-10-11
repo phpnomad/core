@@ -314,12 +314,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/utils.git",
-                "reference": "88fab9624c84137d661958f5827e30b72bcbf77c"
+                "reference": "1c45ab19a547e292a58981892c7bf40f4fc312c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/utils/zipball/88fab9624c84137d661958f5827e30b72bcbf77c",
-                "reference": "88fab9624c84137d661958f5827e30b72bcbf77c",
+                "url": "https://api.github.com/repos/rooted-phoenix/utils/zipball/1c45ab19a547e292a58981892c7bf40f4fc312c6",
+                "reference": "1c45ab19a547e292a58981892c7bf40f4fc312c6",
                 "shasum": ""
             },
             "require-dev": {
@@ -356,7 +356,7 @@
                 "source": "https://github.com/rooted-phoenix/utils/tree/main",
                 "issues": "https://github.com/rooted-phoenix/utils/issues"
             },
-            "time": "2023-10-09T09:27:48+00:00"
+            "time": "2023-10-11T18:55:03+00:00"
         }
     ],
     "packages-dev": [

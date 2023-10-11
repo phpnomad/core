@@ -66,7 +66,6 @@
       <path value="$PROJECT_DIR$/vendor/phoenix/di" />
       <path value="$PROJECT_DIR$/vendor/phoenix/utils" />
       <path value="$PROJECT_DIR$/vendor/phoenix/event" />
-      <path value="$PROJECT_DIR$/vendor/phoenix/config" />
       <path value="$PROJECT_DIR$/vendor/phoenix/cache" />
       <path value="$PROJECT_DIR$/vendor/phoenix/db" />
       <path value="$PROJECT_DIR$/vendor/phoenix/rest" />
