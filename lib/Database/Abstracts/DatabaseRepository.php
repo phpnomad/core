@@ -52,7 +52,7 @@ abstract class DatabaseRepository
     {
         try {
             /** @var TModel $record */
-            $record = Cache::use($this->cacheStrategy)->load($this->getItemCacheKey($id), function () use ($id) {
+            $record = $this->cacheStrategy->load($this->getItemCacheKey($id), function () use ($id) {
                 return $this->modelAdapter->toModel(
                     $this
                         ->databaseStrategy
