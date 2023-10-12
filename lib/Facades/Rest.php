@@ -2,9 +2,9 @@
 
 namespace Phoenix\Core\Facades;
 
-use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Core\Facades\Abstracts\Facade;
 use Phoenix\Core\Traits\WithInstance;
+use Phoenix\Di\Exceptions\DiException;
 use Phoenix\Rest\Interfaces\Handler;
 use Phoenix\Rest\Interfaces\RestStrategy;
 use Phoenix\Rest\Interfaces\Validation;

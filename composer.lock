@@ -62,17 +62,18 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/db.git",
-                "reference": "98c3cf1b5896732a32d0cb9e43bf201c4a11b79a"
+                "reference": "aa1851dac680e68281d0c2810728a4c9b9ab3d82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/db/zipball/98c3cf1b5896732a32d0cb9e43bf201c4a11b79a",
-                "reference": "98c3cf1b5896732a32d0cb9e43bf201c4a11b79a",
+                "url": "https://api.github.com/repos/rooted-phoenix/db/zipball/aa1851dac680e68281d0c2810728a4c9b9ab3d82",
+                "reference": "aa1851dac680e68281d0c2810728a4c9b9ab3d82",
                 "shasum": ""
             },
             "require-dev": {
+                "phoenix/cache": "dev-main",
                 "phoenix/tests": "^0.1.0",
-                "phoenix/utils": "dev-phx-38/core-repository-setup"
+                "phoenix/utils": "dev-main"
             },
             "default-branch": true,
             "type": "library",
@@ -105,7 +106,7 @@
                 "source": "https://github.com/rooted-phoenix/db/tree/main",
                 "issues": "https://github.com/rooted-phoenix/db/issues"
             },
-            "time": "2023-10-11T15:58:06+00:00"
+            "time": "2023-10-12T15:13:16+00:00"
         },
         {
             "name": "phoenix/di",

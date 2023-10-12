@@ -2,8 +2,8 @@
 
 namespace Phoenix\Core\Facades\Abstracts;
 
-use Phoenix\Core\Exceptions\DiException;
 use Phoenix\Di\Container;
+use Phoenix\Di\Exceptions\DiException;
 use Phoenix\Di\Interfaces\CanSetContainer;
 
 /**
