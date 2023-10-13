@@ -2,12 +2,12 @@
 
 namespace Phoenix\Core\Facades;
 
-use Phoenix\Core\Facades\Abstracts\Facade;
-use Phoenix\Core\Traits\WithInstance;
 use Phoenix\Di\Exceptions\DiException;
+use Phoenix\Facade\Abstracts\Facade;
 use Phoenix\Rest\Interfaces\Handler;
 use Phoenix\Rest\Interfaces\RestStrategy;
 use Phoenix\Rest\Interfaces\Validation;
+use Phoenix\Singleton\Traits\WithInstance;
 
 class Rest extends Facade
 {

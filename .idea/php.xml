@@ -67,7 +67,6 @@
       <path value="$PROJECT_DIR$/vendor/phoenix/utils" />
       <path value="$PROJECT_DIR$/vendor/phoenix/event" />
       <path value="$PROJECT_DIR$/vendor/phoenix/cache" />
-      <path value="$PROJECT_DIR$/vendor/phoenix/db" />
       <path value="$PROJECT_DIR$/vendor/phoenix/rest" />
       <path value="$PROJECT_DIR$/vendor/phoenix/loader" />
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
@@ -86,6 +85,8 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/phoenix/singleton" />
+      <path value="$PROJECT_DIR$/vendor/phoenix/facade" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

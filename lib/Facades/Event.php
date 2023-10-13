@@ -2,11 +2,11 @@
 
 namespace Phoenix\Core\Facades;
 
-use Phoenix\Core\Facades\Abstracts\Facade;
-use Phoenix\Core\Traits\WithInstance;
+use Phoenix\Facade\Abstracts\Facade;
 use Phoenix\Di\Exceptions\DiException;
 use Phoenix\Events\Interfaces\Event as EventObject;
 use Phoenix\Events\Interfaces\EventStrategy;
+use Phoenix\Singleton\Traits\WithInstance;
 
 class Event extends Facade
 {

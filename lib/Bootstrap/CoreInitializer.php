@@ -4,8 +4,8 @@ namespace Phoenix\Core\Bootstrap;
 
 use Phoenix\Core\Facades\Cache;
 use Phoenix\Core\Facades\Event;
-use Phoenix\Core\Facades\Interfaces\HasFacades;
 use Phoenix\Core\Facades\Rest;
+use Phoenix\Facade\Interfaces\HasFacades;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
 use Phoenix\Utils\Helpers\Str;
 

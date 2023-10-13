@@ -39,6 +39,14 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/rooted-phoenix/facade.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/rooted-phoenix/singleton.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/rooted-phoenix/utils.git"
         }
     ],
@@ -71,8 +79,9 @@
         "phoenix/event": "dev-main",
         "phoenix/cache": "dev-main",
         "phoenix/di": "dev-main",
-        "phoenix/db": "dev-main",
         "phoenix/rest": "dev-main",
+        "phoenix/singleton": "dev-main",
+        "phoenix/facade": "dev-main",
         "phoenix/loader": "dev-main",
         "ext-json": "*"
     }
