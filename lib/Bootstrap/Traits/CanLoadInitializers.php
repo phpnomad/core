@@ -12,7 +12,7 @@ use Phoenix\Loader\Interfaces\HasLoadCondition;
 use Phoenix\Loader\Interfaces\Loadable;
 use Phoenix\Utils\Helpers\Arr;
 
-trait CanBootstrapTrait
+trait CanLoadInitializers
 {
     protected Container $container;
 
