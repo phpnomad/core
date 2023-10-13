@@ -114,12 +114,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/di.git",
-                "reference": "9de93dc1f364d32e75764498d0e3aacd5e554c81"
+                "reference": "b10453fc9349c9f835879926cd0f0002684bdb74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/di/zipball/9de93dc1f364d32e75764498d0e3aacd5e554c81",
-                "reference": "9de93dc1f364d32e75764498d0e3aacd5e554c81",
+                "url": "https://api.github.com/repos/rooted-phoenix/di/zipball/b10453fc9349c9f835879926cd0f0002684bdb74",
+                "reference": "b10453fc9349c9f835879926cd0f0002684bdb74",
                 "shasum": ""
             },
             "require-dev": {
@@ -157,7 +157,7 @@
                 "source": "https://github.com/rooted-phoenix/di/tree/main",
                 "issues": "https://github.com/rooted-phoenix/di/issues"
             },
-            "time": "2023-10-12T13:32:16+00:00"
+            "time": "2023-10-13T10:57:37+00:00"
         },
         {
             "name": "phoenix/event",
