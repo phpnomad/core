@@ -21,10 +21,10 @@ trait CanLoadInitializers
      */
     protected array $initializers = [];
 
-    protected function loadItems()
+    protected function loadInitializers()
     {
         foreach ($this->initializers as $initializer) {
-            $this->loadItem($initializer);
+            $this->loadInitializer($initializer);
         }
     }
 
@@ -32,7 +32,7 @@ trait CanLoadInitializers
      * @param HasClassDefinitions|Loadable|HasLoadCondition|HasFacades $initializer
      * @return void
      */
-    protected function loadItem($initializer): void
+    protected function loadInitializer($initializer): void
     {
         if($initializer instanceof CanSetContainer){
             $initializer->setContainer($this->container);

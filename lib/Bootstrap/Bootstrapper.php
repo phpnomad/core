@@ -34,6 +34,6 @@ class Bootstrapper implements Loadable
      */
     public function load(): void
     {
-        $this->loadItems();
+        $this->loadInitializers();
     }
 }
