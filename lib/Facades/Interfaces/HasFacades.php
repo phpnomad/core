@@ -1,6 +1,6 @@
 <?php
 
-namespace Phoenix\Core\Bootstrap\Interfaces;
+namespace Phoenix\Core\Facades\Interfaces;
 
 use Phoenix\Core\Facades\Abstracts\Facade;
 

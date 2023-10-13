@@ -2,7 +2,7 @@
 
 namespace Phoenix\Core\Facades\Abstracts;
 
-use Phoenix\Core\Database\Abstracts\DatabaseRepository;
+use Phoenix\Database\Abstracts\DatabaseRepository;
 use Phoenix\Database\Exceptions\RecordNotFoundException;
 use Phoenix\Database\Interfaces\DatabaseModel;
 use Phoenix\Database\Mutators\Interfaces\QueryMutator;

@@ -3,22 +3,25 @@
 namespace Phoenix\Core\Bootstrap;
 
 use Phoenix\Core\Bootstrap\Interfaces\HasClassDefinitions;
-use Phoenix\Core\Bootstrap\Interfaces\HasFacades;
-use Phoenix\Core\Traits\WithInstance;
+use Phoenix\Core\Facades\Interfaces\HasFacades;
 use Phoenix\Di\Container;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
 use Phoenix\Loader\Interfaces\Loadable;
 use Phoenix\Utils\Helpers\Arr;
 
-class Bootstrapper
+class Bootstrapper implements Loadable
 {
-    use WithInstance;
-
     protected Container $container;
 
-    protected function __construct()
+    /**
+     * @var array[HasClassDefinitions|Loadable|HasLoadCondition|HasFacades]
+     */
+    protected array $initializers = [];
+
+    protected function __construct(Container $container, ...$initializers)
     {
-        $this->container = new Container();
+        $this->container = $container;
+        $this->initializers = $initializers;
     }
 
     /**
@@ -27,8 +30,17 @@ class Bootstrapper
      */
     public static function init(...$initializers)
     {
-        foreach ($initializers as $initializer) {
-            static::instance()->loadItem($initializer);
+        $instance = new static(new Container(), ...$initializers);
+        $instance->load();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function load(): void
+    {
+        foreach ($this->initializers as $initializer) {
+            $this->loadItem($initializer);
         }
     }
 
