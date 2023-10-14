@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f627e47573e6431cf035340b02656f5",
+    "content-hash": "41bc44927e7216437f354ea300611f02",
     "packages": [
         {
             "name": "phoenix/cache",
