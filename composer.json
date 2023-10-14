@@ -48,6 +48,10 @@
         {
             "type": "vcs",
             "url": "git@github.com:rooted-phoenix/utils.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:rooted-phoenix/logger.git"
         }
     ],
     "autoload": {
@@ -83,6 +87,7 @@
         "phoenix/singleton": "dev-main",
         "phoenix/facade": "dev-main",
         "phoenix/loader": "dev-main",
+        "phoenix/logger": "dev-main",
         "ext-json": "*"
     }
 }
