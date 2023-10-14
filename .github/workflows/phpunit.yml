@@ -21,6 +21,8 @@ jobs:
         run: |
             eval $(ssh-agent -s)
             ssh-add ~/.ssh/id_rsa
+      - name: Clear composer cache
+        run: composer clear-cache
       - uses: php-actions/composer@v6
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
