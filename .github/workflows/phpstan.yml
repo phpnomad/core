@@ -21,6 +21,8 @@ jobs:
       - name: Clear composer cache
         run: composer clear-cache
       - uses: php-actions/composer@v6
+      - name: Clear PHPStan cache
+        run: vendor/bin/phpstan clear-result-cache
       - name: PHPStan Static Analysis
         uses: php-actions/phpstan@v3
         with:
