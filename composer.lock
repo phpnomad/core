@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41bc44927e7216437f354ea300611f02",
+    "content-hash": "8ae58e86d9d8b7740522a20206b03263",
     "packages": [
         {
             "name": "phoenix/cache",
@@ -260,6 +260,61 @@
                 "issues": "https://github.com/rooted-phoenix/loader/issues"
             },
             "time": "2023-10-13T12:56:38+00:00"
+        },
+        {
+            "name": "phoenix/logger",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:rooted-phoenix/logger.git",
+                "reference": "b536afc831b1ce97347c0d861f9e573ba24afa67"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rooted-phoenix/logger/zipball/b536afc831b1ce97347c0d861f9e573ba24afa67",
+                "reference": "b536afc831b1ce97347c0d861f9e573ba24afa67",
+                "shasum": ""
+            },
+            "require": {
+                "phoenix/di": "dev-main",
+                "phoenix/facade": "dev-main",
+                "phoenix/singleton": "dev-main"
+            },
+            "require-dev": {
+                "phoenix/tests": "^0.1.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phoenix\\Logger\\": "lib/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Phoenix\\Logger\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "php-cs-fixer": [
+                    "php-cs-fixer fix"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Standiford",
+                    "email": "alex@standiford.us"
+                }
+            ],
+            "homepage": "https://github.com/phoenix/core",
+            "support": {
+                "source": "https://github.com/rooted-phoenix/logger/tree/main",
+                "issues": "https://github.com/rooted-phoenix/logger/issues"
+            },
+            "time": "2023-10-14T19:26:58+00:00"
         },
         {
             "name": "phoenix/rest",
@@ -4254,7 +4309,8 @@
         "phoenix/rest": 20,
         "phoenix/singleton": 20,
         "phoenix/facade": 20,
-        "phoenix/loader": 20
+        "phoenix/loader": 20,
+        "phoenix/logger": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

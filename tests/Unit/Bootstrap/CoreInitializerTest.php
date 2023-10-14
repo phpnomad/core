@@ -7,7 +7,10 @@ use Phoenix\Core\Bootstrap\CoreInitializer;
 use Phoenix\Core\Facades\Cache;
 use Phoenix\Core\Facades\Event;
 use Phoenix\Core\Facades\Rest;
+use Phoenix\Core\Strategies\Logger as LoggerStrategy;
 use Phoenix\Core\Tests\TestCase;
+use Phoenix\Logger\Facades\Logger;
+use Phoenix\Logger\Interfaces\LoggerStrategy as CoreLoggerStrategy;
 use Phoenix\Tests\Traits\WithInaccessibleProperties;
 use ReflectionException;
 
@@ -43,12 +46,25 @@ class CoreInitializerTest extends TestCase
      * @covers \Phoenix\Core\Bootstrap\CoreInitializer::getFacades
      * @return void
      */
-    public function testGetFacades()
+    public function testGetFacades(): void
     {
         $this->assertEquals([
+            Logger::instance(),
             Cache::instance(),
             Event::instance(),
             Rest::instance()
         ], (new CoreInitializer())->getFacades());
+    }
+
+    /**
+     * @covers \Phoenix\Core\Bootstrap\CoreInitializer::getClassDefinitions
+     * @return void
+     */
+    public function testGetClassDefinitions(): void
+    {
+        $this->assertEquals(
+            [LoggerStrategy::class => CoreLoggerStrategy::class],
+            (new CoreInitializer())->getClassDefinitions()
+        );
     }
 }
