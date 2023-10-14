@@ -7,6 +7,9 @@ use Phoenix\Cache\Interfaces\CacheStrategy;
 use Phoenix\Facade\Abstracts\Facade;
 use Phoenix\Singleton\Traits\WithInstance;
 
+/**
+ * @extends Facade<CacheStrategy>
+ */
 class Cache extends Facade
 {
     use WithInstance;

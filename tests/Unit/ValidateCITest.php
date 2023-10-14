@@ -1,6 +1,6 @@
 <?php
 
-namespace Phoenix\Tests\Unit;
+namespace Phoenix\Core\Tests\Unit;
 
 use Phoenix\Core\Tests\TestCase;
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f627e47573e6431cf035340b02656f5",
+    "content-hash": "41bc44927e7216437f354ea300611f02",
     "packages": [
         {
             "name": "phoenix/cache",
@@ -163,12 +163,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/facade.git",
-                "reference": "0f076a0bebc80eda7e607f5c6185a4b2c40c6c77"
+                "reference": "08ecd59467d533ab87c17b2e4f360792896bf10a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/facade/zipball/0f076a0bebc80eda7e607f5c6185a4b2c40c6c77",
-                "reference": "0f076a0bebc80eda7e607f5c6185a4b2c40c6c77",
+                "url": "https://api.github.com/repos/rooted-phoenix/facade/zipball/08ecd59467d533ab87c17b2e4f360792896bf10a",
+                "reference": "08ecd59467d533ab87c17b2e4f360792896bf10a",
                 "shasum": ""
             },
             "require-dev": {
@@ -206,7 +206,7 @@
                 "source": "https://github.com/rooted-phoenix/facade/tree/main",
                 "issues": "https://github.com/rooted-phoenix/facade/issues"
             },
-            "time": "2023-10-13T12:06:51+00:00"
+            "time": "2023-10-14T17:59:54+00:00"
         },
         {
             "name": "phoenix/loader",
@@ -214,15 +214,16 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/loader.git",
-                "reference": "5138094b38950cd41d5dede1465eb76075c5a923"
+                "reference": "bfe9826e16ba6dfceba80689c5a9593ff1643dae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/loader/zipball/5138094b38950cd41d5dede1465eb76075c5a923",
-                "reference": "5138094b38950cd41d5dede1465eb76075c5a923",
+                "url": "https://api.github.com/repos/rooted-phoenix/loader/zipball/bfe9826e16ba6dfceba80689c5a9593ff1643dae",
+                "reference": "bfe9826e16ba6dfceba80689c5a9593ff1643dae",
                 "shasum": ""
             },
             "require-dev": {
+                "phoenix/di": "dev-main",
                 "phoenix/facade": "dev-main",
                 "phoenix/tests": "^0.1.0",
                 "phoenix/utils": "dev-main"
@@ -258,7 +259,7 @@
                 "source": "https://github.com/rooted-phoenix/loader/tree/main",
                 "issues": "https://github.com/rooted-phoenix/loader/issues"
             },
-            "time": "2023-10-13T12:29:54+00:00"
+            "time": "2023-10-13T12:56:38+00:00"
         },
         {
             "name": "phoenix/rest",

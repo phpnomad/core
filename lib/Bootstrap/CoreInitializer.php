@@ -7,24 +7,29 @@ use Phoenix\Core\Facades\Event;
 use Phoenix\Core\Facades\Rest;
 use Phoenix\Facade\Interfaces\HasFacades;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
-use Phoenix\Utils\Helpers\Str;
 
-class CoreInitializer implements HasLoadCondition, HasFacades
+final class CoreInitializer implements HasLoadCondition, HasFacades
 {
     public const REQUIRED_PHP_VERSION = '7.4';
+    /**
+     * @var string
+     */
+    protected $phpVersion;
+
+    public function __construct()
+    {
+        $this->phpVersion = phpversion();
+    }
 
     /** @inheitDoc */
     public function shouldLoad(): bool
     {
-        return version_compare(phpversion(), static::REQUIRED_PHP_VERSION, '>=');
+        return version_compare($this->phpVersion, static::REQUIRED_PHP_VERSION, '>=');
     }
 
-    /** @inheritDoc */
-    public function getConfigDirectories(): array
-    {
-        return ['core' => Str::append(dirname(__DIR__, 3), '/') . 'configuration'];
-    }
-
+    /**
+     * @return array<Cache|Event|Rest>
+     */
     public function getFacades(): array
     {
         return [
