@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/di.git",
-                "reference": "7e3b55e75b3ad383f1f4f44a0434a73d9c9eda7b"
+                "reference": "b1128b2c78a9d62ccb4d4684625d8396e38f7be8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/di/zipball/7e3b55e75b3ad383f1f4f44a0434a73d9c9eda7b",
-                "reference": "7e3b55e75b3ad383f1f4f44a0434a73d9c9eda7b",
+                "url": "https://api.github.com/repos/rooted-phoenix/di/zipball/b1128b2c78a9d62ccb4d4684625d8396e38f7be8",
+                "reference": "b1128b2c78a9d62ccb4d4684625d8396e38f7be8",
                 "shasum": ""
             },
             "require-dev": {
@@ -105,7 +105,7 @@
                 "source": "https://github.com/rooted-phoenix/di/tree/main",
                 "issues": "https://github.com/rooted-phoenix/di/issues"
             },
-            "time": "2023-10-13T11:24:22+00:00"
+            "time": "2023-10-14T21:39:58+00:00"
         },
         {
             "name": "phoenix/event",
@@ -163,16 +163,17 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/facade.git",
-                "reference": "08ecd59467d533ab87c17b2e4f360792896bf10a"
+                "reference": "d5109312e87d41b2ab892150d815eb012dd59d71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/facade/zipball/08ecd59467d533ab87c17b2e4f360792896bf10a",
-                "reference": "08ecd59467d533ab87c17b2e4f360792896bf10a",
+                "url": "https://api.github.com/repos/rooted-phoenix/facade/zipball/d5109312e87d41b2ab892150d815eb012dd59d71",
+                "reference": "d5109312e87d41b2ab892150d815eb012dd59d71",
                 "shasum": ""
             },
             "require-dev": {
                 "phoenix/di": "dev-main",
+                "phoenix/logger": "dev-main",
                 "phoenix/tests": "^0.1.0"
             },
             "default-branch": true,
@@ -206,7 +207,7 @@
                 "source": "https://github.com/rooted-phoenix/facade/tree/main",
                 "issues": "https://github.com/rooted-phoenix/facade/issues"
             },
-            "time": "2023-10-14T17:59:54+00:00"
+            "time": "2023-10-14T21:43:33+00:00"
         },
         {
             "name": "phoenix/loader",
@@ -214,12 +215,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/loader.git",
-                "reference": "bfe9826e16ba6dfceba80689c5a9593ff1643dae"
+                "reference": "9747363d8d2a35f4cc5d9c5ff2a6f52c40e0db9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/loader/zipball/bfe9826e16ba6dfceba80689c5a9593ff1643dae",
-                "reference": "bfe9826e16ba6dfceba80689c5a9593ff1643dae",
+                "url": "https://api.github.com/repos/rooted-phoenix/loader/zipball/9747363d8d2a35f4cc5d9c5ff2a6f52c40e0db9a",
+                "reference": "9747363d8d2a35f4cc5d9c5ff2a6f52c40e0db9a",
                 "shasum": ""
             },
             "require-dev": {
@@ -259,7 +260,7 @@
                 "source": "https://github.com/rooted-phoenix/loader/tree/main",
                 "issues": "https://github.com/rooted-phoenix/loader/issues"
             },
-            "time": "2023-10-13T12:56:38+00:00"
+            "time": "2023-10-14T22:06:01+00:00"
         },
         {
             "name": "phoenix/logger",
@@ -267,18 +268,13 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:rooted-phoenix/logger.git",
-                "reference": "b536afc831b1ce97347c0d861f9e573ba24afa67"
+                "reference": "5566aed6de4a0e83786c66fdd3e8556c39b7c240"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rooted-phoenix/logger/zipball/b536afc831b1ce97347c0d861f9e573ba24afa67",
-                "reference": "b536afc831b1ce97347c0d861f9e573ba24afa67",
+                "url": "https://api.github.com/repos/rooted-phoenix/logger/zipball/5566aed6de4a0e83786c66fdd3e8556c39b7c240",
+                "reference": "5566aed6de4a0e83786c66fdd3e8556c39b7c240",
                 "shasum": ""
-            },
-            "require": {
-                "phoenix/di": "dev-main",
-                "phoenix/facade": "dev-main",
-                "phoenix/singleton": "dev-main"
             },
             "require-dev": {
                 "phoenix/tests": "^0.1.0"
@@ -314,7 +310,7 @@
                 "source": "https://github.com/rooted-phoenix/logger/tree/main",
                 "issues": "https://github.com/rooted-phoenix/logger/issues"
             },
-            "time": "2023-10-14T19:26:58+00:00"
+            "time": "2023-10-14T21:31:40+00:00"
         },
         {
             "name": "phoenix/rest",
