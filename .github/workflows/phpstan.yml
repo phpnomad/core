@@ -20,6 +20,8 @@ jobs:
             ssh-add ~/.ssh/id_rsa
       - name: Clear composer cache
         run: composer clear-cache
+      - name: Clear PHPStan cache
+        run: vendor/bin/phpstan clear-result-cache
       - uses: php-actions/composer@v6
       - name: PHPStan Static Analysis
         uses: php-actions/phpstan@v3
