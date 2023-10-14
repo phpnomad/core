@@ -1,6 +1,6 @@
 <?php
 
-namespace Facades;
+namespace Phoenix\Core\Tests\Unit\Facades;
 
 use Generator;
 use Mockery;
