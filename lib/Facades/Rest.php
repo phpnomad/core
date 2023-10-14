@@ -9,6 +9,9 @@ use Phoenix\Rest\Interfaces\RestStrategy;
 use Phoenix\Rest\Interfaces\Validation;
 use Phoenix\Singleton\Traits\WithInstance;
 
+/**
+ * @extends Facade<RestStrategy>
+ */
 class Rest extends Facade
 {
     use WithInstance;

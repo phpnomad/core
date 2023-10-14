@@ -8,6 +8,9 @@ use Phoenix\Events\Interfaces\Event as EventObject;
 use Phoenix\Events\Interfaces\EventStrategy;
 use Phoenix\Singleton\Traits\WithInstance;
 
+/**
+ * @extends Facade<EventStrategy>
+ */
 class Event extends Facade
 {
     use WithInstance;
