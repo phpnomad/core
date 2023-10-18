@@ -5,9 +5,12 @@ namespace Phoenix\Core\Strategies;
 use Phoenix\Core\Events\ItemLogged;
 use Phoenix\Core\Facades\Event;
 use Phoenix\Logger\Interfaces\LoggerStrategy;
+use Phoenix\Logger\Traits\CanLogException;
 
 class Logger implements LoggerStrategy
 {
+    use CanLogException;
+
     /**
      * @param int&ItemLogged::* $severity
      * @param string $message
