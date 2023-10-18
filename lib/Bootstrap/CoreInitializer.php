@@ -9,7 +9,7 @@ use Phoenix\Core\Strategies\Logger as LoggerStrategy;
 use Phoenix\Facade\Interfaces\HasFacades;
 use Phoenix\Loader\Interfaces\HasClassDefinitions;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
-use Phoenix\Logger\Facades\Logger;
+usePhoenix\Core\Facades\Logger;
 use Phoenix\Logger\Interfaces\LoggerStrategy as CoreLoggerStrategy;
 
 final class CoreInitializer implements HasLoadCondition, HasFacades, HasClassDefinitions

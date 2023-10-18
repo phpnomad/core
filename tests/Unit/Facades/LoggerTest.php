@@ -5,7 +5,7 @@ namespace Phoenix\Core\Tests\Unit\Facades;
 use Generator;
 use Mockery;
 use Mockery\MockInterface;
-use Phoenix\Logger\Facades\Logger;
+usePhoenix\Core\Facades\Logger;
 use Phoenix\Core\Tests\TestCase;
 use Phoenix\Logger\Interfaces\LoggerStrategy;
 use Phoenix\Tests\Traits\WithInaccessibleMethods;
@@ -39,7 +39,7 @@ class LoggerTest extends TestCase
     }
 
     /**
-     * @covers       \Phoenix\Logger\Facades\Logger::load
+     * @covers       \use Phoenix\Core\Facades\Logger::load
      * @dataProvider providerForMethods
      */
     public function testCanProvideMethods(string $method): void
