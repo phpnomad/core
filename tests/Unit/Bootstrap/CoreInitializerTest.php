@@ -9,7 +9,7 @@ use Phoenix\Core\Facades\Event;
 use Phoenix\Core\Facades\Rest;
 use Phoenix\Core\Strategies\Logger as LoggerStrategy;
 use Phoenix\Core\Tests\TestCase;
-usePhoenix\Core\Facades\Logger;
+use Phoenix\Core\Facades\Logger;
 use Phoenix\Logger\Interfaces\LoggerStrategy as CoreLoggerStrategy;
 use Phoenix\Tests\Traits\WithInaccessibleProperties;
 use ReflectionException;

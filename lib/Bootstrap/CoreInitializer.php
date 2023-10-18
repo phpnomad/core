@@ -4,12 +4,12 @@ namespace Phoenix\Core\Bootstrap;
 
 use Phoenix\Core\Facades\Cache;
 use Phoenix\Core\Facades\Event;
+use Phoenix\Core\Facades\Logger;
 use Phoenix\Core\Facades\Rest;
 use Phoenix\Core\Strategies\Logger as LoggerStrategy;
 use Phoenix\Facade\Interfaces\HasFacades;
 use Phoenix\Loader\Interfaces\HasClassDefinitions;
 use Phoenix\Loader\Interfaces\HasLoadCondition;
-usePhoenix\Core\Facades\Logger;
 use Phoenix\Logger\Interfaces\LoggerStrategy as CoreLoggerStrategy;
 
 final class CoreInitializer implements HasLoadCondition, HasFacades, HasClassDefinitions
