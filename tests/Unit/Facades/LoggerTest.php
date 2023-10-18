@@ -5,7 +5,7 @@ namespace Phoenix\Core\Tests\Unit\Facades;
 use Generator;
 use Mockery;
 use Mockery\MockInterface;
-use Phoenix\Core\Facades\Logger;
+use Phoenix\Logger\Facades\Logger;
 use Phoenix\Core\Tests\TestCase;
 use Phoenix\Logger\Interfaces\LoggerStrategy;
 use Phoenix\Tests\Traits\WithInaccessibleMethods;
