@@ -40,6 +40,36 @@ class ItemLogged implements Event
     }
 
     /**
+     * Gets the severity
+     *
+     * @return int
+     */
+    public function getSeverity(): int
+    {
+        return $this->severity;
+    }
+
+    /**
+     * Gets the message
+     *
+     * @return string
+     */
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
+
+    /**
+     * Gets the context data for this logged item.
+     *
+     * @return mixed[]
+     */
+    public function getContext(): array
+    {
+        return $this->context;
+    }
+
+    /**
      * Checks the severity based on the provided level.
      *
      * @param string $comparison
