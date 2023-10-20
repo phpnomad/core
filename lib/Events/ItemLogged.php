@@ -78,20 +78,17 @@ class ItemLogged implements Event
      */
     public function severityIs(string $comparison, int $severity): bool
     {
-        $currentSeverity = $this->severityLevels[$this->severity] ?? -1;
-        $compareSeverity = $this->severityLevels[$severity] ?? -1;
-
         switch ($comparison) {
             case '>':
-                return $currentSeverity > $compareSeverity;
+                return $this->severity > $severity;
             case '>=':
-                return $currentSeverity >= $compareSeverity;
+                return $this->severity >= $severity;
             case '<':
-                return $currentSeverity < $compareSeverity;
+                return $this->severity < $severity;
             case '<=':
-                return $currentSeverity <= $compareSeverity;
+                return $this->severity <= $severity;
             case '=':
-                return $currentSeverity === $compareSeverity;
+                return $this->severity === $severity;
             default:
                 return false;
         }
