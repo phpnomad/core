@@ -1,14 +1,14 @@
 <?php
 
-namespace Phoenix\Core\Tests\Unit\Facades;
+namespace PHPNomad\Core\Tests\Unit\Facades;
 
 use Mockery;
 use Mockery\MockInterface;
-use Phoenix\Core\Facades\Event;
-use Phoenix\Core\Tests\TestCase;
-use Phoenix\Events\Interfaces\Event as EventObject;
-use Phoenix\Events\Interfaces\EventStrategy;
-use Phoenix\Tests\Traits\WithInaccessibleMethods;
+use PHPNomad\Core\Facades\Event;
+use PHPNomad\Core\Tests\TestCase;
+use PHPNomad\Events\Interfaces\Event as EventObject;
+use PHPNomad\Events\Interfaces\EventStrategy;
+use PHPNomad\Tests\Traits\WithInaccessibleMethods;
 use ReflectionException;
 
 class EventTest extends TestCase
@@ -36,7 +36,7 @@ class EventTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::broadcast
+     * @covers \PHPNomad\Core\Facades\Event::broadcast
      * @return void
      */
     public function testCanBroadcast(): void
@@ -51,7 +51,7 @@ class EventTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::attach
+     * @covers \PHPNomad\Core\Facades\Event::attach
      * @return void
      */
     public function testCanAttach(): void
@@ -67,7 +67,7 @@ class EventTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::detach
+     * @covers \PHPNomad\Core\Facades\Event::detach
      * @return void
      */
     public function testCanDetach(): void
@@ -83,7 +83,7 @@ class EventTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::abstractInstance
+     * @covers \PHPNomad\Core\Facades\Event::abstractInstance
      * @throws ReflectionException
      */
     public function testAbstractInstanceMatchesExpected(): void

@@ -1,12 +1,12 @@
 <?php
 
-namespace Phoenix\Core\Facades;
+namespace PHPNomad\Core\Facades;
 
 use Exception;
-use Phoenix\Di\Exceptions\DiException;
-use Phoenix\Facade\Abstracts\Facade;
-use Phoenix\Logger\Interfaces\LoggerStrategy;
-use Phoenix\Singleton\Traits\WithInstance;
+use PHPNomad\Di\Exceptions\DiException;
+use PHPNomad\Facade\Abstracts\Facade;
+use PHPNomad\Logger\Interfaces\LoggerStrategy;
+use PHPNomad\Singleton\Traits\WithInstance;
 
 /**
  * @extends Facade<LoggerStrategy>

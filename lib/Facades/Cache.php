@@ -1,11 +1,11 @@
 <?php
 
-namespace Phoenix\Core\Facades;
+namespace PHPNomad\Core\Facades;
 
-use Phoenix\Cache\Exceptions\CachedItemNotFoundException;
-use Phoenix\Cache\Interfaces\CacheStrategy;
-use Phoenix\Facade\Abstracts\Facade;
-use Phoenix\Singleton\Traits\WithInstance;
+use PHPNomad\Cache\Exceptions\CachedItemNotFoundException;
+use PHPNomad\Cache\Interfaces\CacheStrategy;
+use PHPNomad\Facade\Abstracts\Facade;
+use PHPNomad\Singleton\Traits\WithInstance;
 
 /**
  * @extends Facade<CacheStrategy>

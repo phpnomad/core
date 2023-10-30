@@ -1,16 +1,16 @@
 <?php
 
-namespace Phoenix\Core\Bootstrap;
+namespace PHPNomad\Core\Bootstrap;
 
-use Phoenix\Core\Facades\Cache;
-use Phoenix\Core\Facades\Event;
-use Phoenix\Core\Facades\Logger;
-use Phoenix\Core\Facades\Rest;
-use Phoenix\Core\Strategies\Logger as LoggerStrategy;
-use Phoenix\Facade\Interfaces\HasFacades;
-use Phoenix\Loader\Interfaces\HasClassDefinitions;
-use Phoenix\Loader\Interfaces\HasLoadCondition;
-use Phoenix\Logger\Interfaces\LoggerStrategy as CoreLoggerStrategy;
+use PHPNomad\Core\Facades\Cache;
+use PHPNomad\Core\Facades\Event;
+use PHPNomad\Core\Facades\Logger;
+use PHPNomad\Core\Facades\Rest;
+use PHPNomad\Core\Strategies\Logger as LoggerStrategy;
+use PHPNomad\Facade\Interfaces\HasFacades;
+use PHPNomad\Loader\Interfaces\HasClassDefinitions;
+use PHPNomad\Loader\Interfaces\HasLoadCondition;
+use PHPNomad\Logger\Interfaces\LoggerStrategy as CoreLoggerStrategy;
 
 final class CoreInitializer implements HasLoadCondition, HasFacades, HasClassDefinitions
 {

@@ -1,8 +1,8 @@
 {
-    "name": "phoenix/core",
+    "name": "phpnomad/core",
     "description": "",
     "type": "library",
-    "homepage": "https://github.com/phoenix/core",
+    "homepage": "https://github.com/phpnomad/core",
     "readme": "README.md",
     "license": "MIT",
     "scripts": {
@@ -11,57 +11,57 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/tests.git"
+            "url": "git@github.com:phpnomad/tests.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/di.git"
+            "url": "git@github.com:phpnomad/di.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/cache.git"
+            "url": "git@github.com:phpnomad/cache.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/db.git"
+            "url": "git@github.com:phpnomad/db.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/loader.git"
+            "url": "git@github.com:phpnomad/loader.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/rest.git"
+            "url": "git@github.com:phpnomad/rest.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/event.git"
+            "url": "git@github.com:phpnomad/event.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/facade.git"
+            "url": "git@github.com:phpnomad/facade.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/singleton.git"
+            "url": "git@github.com:phpnomad/singleton.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/utils.git"
+            "url": "git@github.com:phpnomad/utils.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:rooted-phoenix/logger.git"
+            "url": "git@github.com:phpnomad/logger.git"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Phoenix\\Core\\": "lib/"
+            "PHPNomad\\Core\\": "lib/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Phoenix\\Core\\Tests\\": "tests/"
+            "PHPNomad\\Core\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -71,7 +71,7 @@
         }
     ],
     "require-dev": {
-        "phoenix/tests": "^0.1.0"
+        "phpnomad/tests": "^0.1.0"
     },
     "config": {
         "allow-plugins": {
@@ -79,15 +79,15 @@
         }
     },
     "require": {
-        "phoenix/utils": "dev-main",
-        "phoenix/event": "dev-main",
-        "phoenix/cache": "dev-main",
-        "phoenix/di": "dev-main",
-        "phoenix/rest": "dev-main",
-        "phoenix/singleton": "dev-main",
-        "phoenix/facade": "dev-main",
-        "phoenix/loader": "dev-main",
-        "phoenix/logger": "dev-main",
+        "phpnomad/utils": "dev-main",
+        "phpnomad/event": "dev-main",
+        "phpnomad/cache": "dev-main",
+        "phpnomad/di": "dev-main",
+        "phpnomad/rest": "dev-main",
+        "phpnomad/singleton": "dev-main",
+        "phpnomad/facade": "dev-main",
+        "phpnomad/loader": "dev-main",
+        "phpnomad/logger": "dev-main",
         "ext-json": "*"
     }
 }

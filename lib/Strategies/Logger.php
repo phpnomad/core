@@ -1,11 +1,11 @@
 <?php
 
-namespace Phoenix\Core\Strategies;
+namespace PHPNomad\Core\Strategies;
 
-use Phoenix\Core\Events\ItemLogged;
-use Phoenix\Core\Facades\Event;
-use Phoenix\Logger\Interfaces\LoggerStrategy;
-use Phoenix\Logger\Traits\CanLogException;
+use PHPNomad\Core\Events\ItemLogged;
+use PHPNomad\Core\Facades\Event;
+use PHPNomad\Logger\Interfaces\LoggerStrategy;
+use PHPNomad\Logger\Traits\CanLogException;
 
 class Logger implements LoggerStrategy
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Phoenix\Core\Facades;
+namespace PHPNomad\Core\Facades;
 
-use Phoenix\Facade\Abstracts\Facade;
-use Phoenix\Di\Exceptions\DiException;
-use Phoenix\Events\Interfaces\Event as EventObject;
-use Phoenix\Events\Interfaces\EventStrategy;
-use Phoenix\Singleton\Traits\WithInstance;
+use PHPNomad\Facade\Abstracts\Facade;
+use PHPNomad\Di\Exceptions\DiException;
+use PHPNomad\Events\Interfaces\Event as EventObject;
+use PHPNomad\Events\Interfaces\EventStrategy;
+use PHPNomad\Singleton\Traits\WithInstance;
 
 /**
  * @extends Facade<EventStrategy>

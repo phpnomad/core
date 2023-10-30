@@ -1,13 +1,13 @@
 <?php
 
-namespace Phoenix\Core\Tests\Unit\Facades;
+namespace PHPNomad\Core\Tests\Unit\Facades;
 
 use Mockery;
 use Mockery\MockInterface;
-use Phoenix\Cache\Interfaces\CacheStrategy;
-use Phoenix\Core\Facades\Cache;
-use Phoenix\Core\Tests\TestCase;
-use Phoenix\Tests\Traits\WithInaccessibleMethods;
+use PHPNomad\Cache\Interfaces\CacheStrategy;
+use PHPNomad\Core\Facades\Cache;
+use PHPNomad\Core\Tests\TestCase;
+use PHPNomad\Tests\Traits\WithInaccessibleMethods;
 use ReflectionException;
 
 class CacheTest extends TestCase
@@ -35,7 +35,7 @@ class CacheTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::load
+     * @covers \PHPNomad\Core\Facades\Event::load
      */
     public function testCanLoad(): void
     {
@@ -52,7 +52,7 @@ class CacheTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::get
+     * @covers \PHPNomad\Core\Facades\Event::get
      */
     public function testCanGet(): void
     {
@@ -66,7 +66,7 @@ class CacheTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::set
+     * @covers \PHPNomad\Core\Facades\Event::set
      */
     public function testCanSet(): void
     {
@@ -82,7 +82,7 @@ class CacheTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::abstractInstance
+     * @covers \PHPNomad\Core\Facades\Event::abstractInstance
      * @throws ReflectionException
      */
     public function testAbstractInstanceMatchesExpected(): void

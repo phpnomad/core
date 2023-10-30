@@ -1,17 +1,17 @@
 <?php
 
-namespace Phoenix\Core\Tests\Unit\Bootstrap;
+namespace PHPNomad\Core\Tests\Unit\Bootstrap;
 
 use Generator;
-use Phoenix\Core\Bootstrap\CoreInitializer;
-use Phoenix\Core\Facades\Cache;
-use Phoenix\Core\Facades\Event;
-use Phoenix\Core\Facades\Rest;
-use Phoenix\Core\Strategies\Logger as LoggerStrategy;
-use Phoenix\Core\Tests\TestCase;
-use Phoenix\Core\Facades\Logger;
-use Phoenix\Logger\Interfaces\LoggerStrategy as CoreLoggerStrategy;
-use Phoenix\Tests\Traits\WithInaccessibleProperties;
+use PHPNomad\Core\Bootstrap\CoreInitializer;
+use PHPNomad\Core\Facades\Cache;
+use PHPNomad\Core\Facades\Event;
+use PHPNomad\Core\Facades\Rest;
+use PHPNomad\Core\Strategies\Logger as LoggerStrategy;
+use PHPNomad\Core\Tests\TestCase;
+use PHPNomad\Core\Facades\Logger;
+use PHPNomad\Logger\Interfaces\LoggerStrategy as CoreLoggerStrategy;
+use PHPNomad\Tests\Traits\WithInaccessibleProperties;
 use ReflectionException;
 
 class CoreInitializerTest extends TestCase
@@ -19,7 +19,7 @@ class CoreInitializerTest extends TestCase
     use WithInaccessibleProperties;
 
     /**
-     * @covers \Phoenix\Core\Bootstrap\CoreInitializer::shouldLoad
+     * @covers \PHPNomad\Core\Bootstrap\CoreInitializer::shouldLoad
      * @param bool $expected
      * @param string $version
      * @return void
@@ -43,7 +43,7 @@ class CoreInitializerTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Bootstrap\CoreInitializer::getFacades
+     * @covers \PHPNomad\Core\Bootstrap\CoreInitializer::getFacades
      * @return void
      */
     public function testGetFacades(): void
@@ -57,7 +57,7 @@ class CoreInitializerTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Bootstrap\CoreInitializer::getClassDefinitions
+     * @covers \PHPNomad\Core\Bootstrap\CoreInitializer::getClassDefinitions
      * @return void
      */
     public function testGetClassDefinitions(): void

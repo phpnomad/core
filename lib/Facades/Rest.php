@@ -1,13 +1,13 @@
 <?php
 
-namespace Phoenix\Core\Facades;
+namespace PHPNomad\Core\Facades;
 
-use Phoenix\Di\Exceptions\DiException;
-use Phoenix\Facade\Abstracts\Facade;
-use Phoenix\Rest\Interfaces\Handler;
-use Phoenix\Rest\Interfaces\RestStrategy;
-use Phoenix\Rest\Interfaces\Validation;
-use Phoenix\Singleton\Traits\WithInstance;
+use PHPNomad\Di\Exceptions\DiException;
+use PHPNomad\Facade\Abstracts\Facade;
+use PHPNomad\Rest\Interfaces\Handler;
+use PHPNomad\Rest\Interfaces\RestStrategy;
+use PHPNomad\Rest\Interfaces\Validation;
+use PHPNomad\Singleton\Traits\WithInstance;
 
 /**
  * @extends Facade<RestStrategy>

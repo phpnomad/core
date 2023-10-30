@@ -1,18 +1,18 @@
 <?php
 
-namespace Phoenix\Core\Tests\Unit\Facades;
+namespace PHPNomad\Core\Tests\Unit\Facades;
 
 use Generator;
 use Mockery;
 use Mockery\MockInterface;
-use Phoenix\Cache\Interfaces\CacheStrategy;
-use Phoenix\Core\Facades\Cache;
-use Phoenix\Core\Facades\Rest;
-use Phoenix\Core\Tests\TestCase;
-use Phoenix\Rest\Interfaces\Handler;
-use Phoenix\Rest\Interfaces\RestStrategy;
-use Phoenix\Rest\Interfaces\Validation;
-use Phoenix\Tests\Traits\WithInaccessibleMethods;
+use PHPNomad\Cache\Interfaces\CacheStrategy;
+use PHPNomad\Core\Facades\Cache;
+use PHPNomad\Core\Facades\Rest;
+use PHPNomad\Core\Tests\TestCase;
+use PHPNomad\Rest\Interfaces\Handler;
+use PHPNomad\Rest\Interfaces\RestStrategy;
+use PHPNomad\Rest\Interfaces\Validation;
+use PHPNomad\Tests\Traits\WithInaccessibleMethods;
 use ReflectionException;
 
 class RestTest extends TestCase
@@ -43,7 +43,7 @@ class RestTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::load
+     * @covers \PHPNomad\Core\Facades\Event::load
      * @dataProvider providerForMethods
      */
     public function testCanProvideMethods(string $method): void
@@ -70,7 +70,7 @@ class RestTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Event::abstractInstance
+     * @covers \PHPNomad\Core\Facades\Event::abstractInstance
      * @throws ReflectionException
      */
     public function testAbstractInstanceMatchesExpected(): void

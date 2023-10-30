@@ -1,8 +1,8 @@
 <?php
 
-namespace Phoenix\Core\Events;
+namespace PHPNomad\Core\Events;
 
-use Phoenix\Events\Interfaces\Event;
+use PHPNomad\Events\Interfaces\Event;
 
 class ItemLogged implements Event
 {

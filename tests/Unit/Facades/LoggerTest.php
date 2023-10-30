@@ -1,14 +1,14 @@
 <?php
 
-namespace Phoenix\Core\Tests\Unit\Facades;
+namespace PHPNomad\Core\Tests\Unit\Facades;
 
 use Generator;
 use Mockery;
 use Mockery\MockInterface;
-use Phoenix\Core\Facades\Logger;
-use Phoenix\Core\Tests\TestCase;
-use Phoenix\Logger\Interfaces\LoggerStrategy;
-use Phoenix\Tests\Traits\WithInaccessibleMethods;
+use PHPNomad\Core\Facades\Logger;
+use PHPNomad\Core\Tests\TestCase;
+use PHPNomad\Logger\Interfaces\LoggerStrategy;
+use PHPNomad\Tests\Traits\WithInaccessibleMethods;
 use ReflectionException;
 
 class LoggerTest extends TestCase
@@ -39,7 +39,7 @@ class LoggerTest extends TestCase
     }
 
     /**
-     * @covers       \use Phoenix\Core\Facades\Logger::load
+     * @covers       \use PHPNomad\Core\Facades\Logger::load
      * @dataProvider providerForMethods
      */
     public function testCanProvideMethods(string $method): void
@@ -67,7 +67,7 @@ class LoggerTest extends TestCase
     }
 
     /**
-     * @covers \Phoenix\Core\Facades\Logger::abstractInstance
+     * @covers \PHPNomad\Core\Facades\Logger::abstractInstance
      * @throws ReflectionException
      */
     public function testAbstractInstanceMatchesExpected(): void
