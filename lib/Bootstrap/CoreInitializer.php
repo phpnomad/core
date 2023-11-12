@@ -5,7 +5,6 @@ namespace PHPNomad\Core\Bootstrap;
 use PHPNomad\Core\Facades\Cache;
 use PHPNomad\Core\Facades\Event;
 use PHPNomad\Core\Facades\Logger;
-use PHPNomad\Core\Facades\Rest;
 use PHPNomad\Core\Strategies\Logger as LoggerStrategy;
 use PHPNomad\Facade\Interfaces\HasFacades;
 use PHPNomad\Loader\Interfaces\HasClassDefinitions;
@@ -32,15 +31,14 @@ final class CoreInitializer implements HasLoadCondition, HasFacades, HasClassDef
     }
 
     /**
-     * @return array<Cache|Event|Rest|Logger>
+     * @return array<Cache|Event|Logger>
      */
     public function getFacades(): array
     {
         return [
             Logger::instance(),
             Cache::instance(),
-            Event::instance(),
-            Rest::instance()
+            Event::instance()
         ];
     }
 
