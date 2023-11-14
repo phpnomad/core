@@ -26,7 +26,6 @@ class Event extends Facade
         try {
             static::instance()->getContainedInstance()->broadcast($event);
         } catch (DiException $e) {
-            //TODO: CATCH THIS
         }
     }
 
