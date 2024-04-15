@@ -4,7 +4,11 @@ namespace PHPNomad\Core\Bootstrap;
 
 use PHPNomad\Core\Facades\Cache;
 use PHPNomad\Core\Facades\Event;
+use PHPNomad\Core\Facades\InstanceProvider as InstanceProviderFacade;
 use PHPNomad\Core\Facades\Logger;
+use PHPNomad\Core\Facades\PathResolver;
+use PHPNomad\Core\Facades\Template;
+use PHPNomad\Core\Facades\UrlResolver;
 use PHPNomad\Core\Strategies\InstanceProviderStrategy;
 use PHPNomad\Core\Strategies\Logger as LoggerStrategy;
 use PHPNomad\Di\Interfaces\CanSetContainer;
@@ -42,11 +46,15 @@ final class CoreInitializer implements HasLoadCondition, HasFacades, HasClassDef
      */
     public function getFacades(): array
     {
-        return [
+        return array(
             Logger::instance(),
             Cache::instance(),
-            Event::instance()
-        ];
+            Event::instance(),
+            Template::instance(),
+            UrlResolver::instance(),
+            PathResolver::instance(),
+            InstanceProviderFacade::instance()
+        );
     }
 
     /**
