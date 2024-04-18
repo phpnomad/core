@@ -8,7 +8,7 @@ use PHPNomad\Template\Interfaces\CanRender;
 use PHPNomad\Template\Interfaces\CanResolveUrls;
 
 /**
- * @extends Facade<CanRender>
+ * @extends Facade<CanResolveUrls>
  */
 class UrlResolver extends Facade
 {
