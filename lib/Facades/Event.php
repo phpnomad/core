@@ -23,10 +23,7 @@ class Event extends Facade
      */
     public static function broadcast(EventObject $event): void
     {
-        try {
-            static::instance()->getContainedInstance()->broadcast($event);
-        } catch (DiException $e) {
-        }
+        static::instance()->getContainedInstance()->broadcast($event);
     }
 
     /**
