@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a67362e07db5cff75f86de155e65be0",
+    "content-hash": "233cf9f286d058b2a0d03049acd04d3f",
     "packages": [
         {
             "name": "phpnomad/auth",
@@ -185,12 +185,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/event.git",
-                "reference": "703ea6146586952573be22c0095e13d3292f188d"
+                "reference": "c2f8f4c19bfd017086dbffb0510e20b06d7fa533"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/event/zipball/703ea6146586952573be22c0095e13d3292f188d",
-                "reference": "703ea6146586952573be22c0095e13d3292f188d",
+                "url": "https://api.github.com/repos/phpnomad/event/zipball/c2f8f4c19bfd017086dbffb0510e20b06d7fa533",
+                "reference": "c2f8f4c19bfd017086dbffb0510e20b06d7fa533",
                 "shasum": ""
             },
             "require-dev": {
@@ -217,7 +217,7 @@
                 "issues": "https://github.com/phpnomad/event/issues",
                 "source": "https://github.com/phpnomad/event/tree/1.0.0"
             },
-            "time": "2024-12-18T16:16:45+00:00"
+            "time": "2024-12-18T17:10:47+00:00"
         },
         {
             "name": "phpnomad/facade",
@@ -260,6 +260,51 @@
                 "source": "https://github.com/phpnomad/facade/tree/1.0.0"
             },
             "time": "2024-12-18T16:18:06+00:00"
+        },
+        {
+            "name": "phpnomad/http",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpnomad/http.git",
+                "reference": "1c63d44e95b4f02d2b40194522b8502e911f7f40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpnomad/http/zipball/1c63d44e95b4f02d2b40194522b8502e911f7f40",
+                "reference": "1c63d44e95b4f02d2b40194522b8502e911f7f40",
+                "shasum": ""
+            },
+            "require": {
+                "phpnomad/auth": "^1.0",
+                "phpnomad/enum-polyfill": "^1.0"
+            },
+            "require-dev": {
+                "phpnomad/tests": "^0.1.0 || ^0.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPNomad\\Http\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Standiford",
+                    "email": "alex@standiford.us"
+                }
+            ],
+            "description": "Foundational components for working with HTTP request/responses.",
+            "homepage": "https://github.com/phpnomad/core",
+            "support": {
+                "issues": "https://github.com/phpnomad/http/issues",
+                "source": "https://github.com/phpnomad/http/tree/1.0.1"
+            },
+            "time": "2025-01-13T15:35:26+00:00"
         },
         {
             "name": "phpnomad/loader",
@@ -393,26 +438,28 @@
         },
         {
             "name": "phpnomad/rest",
-            "version": "1.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/rest.git",
-                "reference": "59e37a7d797e5042271d96eb385b98c575f4f88e"
+                "reference": "bb214f65fa94eff173f0678eafe1840efc74a508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/rest/zipball/59e37a7d797e5042271d96eb385b98c575f4f88e",
-                "reference": "59e37a7d797e5042271d96eb385b98c575f4f88e",
+                "url": "https://api.github.com/repos/phpnomad/rest/zipball/bb214f65fa94eff173f0678eafe1840efc74a508",
+                "reference": "bb214f65fa94eff173f0678eafe1840efc74a508",
                 "shasum": ""
             },
             "require": {
                 "phpnomad/auth": "^1.0",
                 "phpnomad/cache": "^1.0",
                 "phpnomad/enum-polyfill": "^1.0",
-                "phpnomad/event": "^1.0"
+                "phpnomad/event": "^1.0",
+                "phpnomad/http": "^1.0",
+                "phpnomad/utils": "^1.0"
             },
             "require-dev": {
-                "phpnomad/tests": "^0.1.0"
+                "phpnomad/tests": "^0.1.0 || ^0.3.0"
             },
             "type": "library",
             "autoload": {
@@ -433,9 +480,9 @@
             "homepage": "https://github.com/phpnomad/core",
             "support": {
                 "issues": "https://github.com/phpnomad/rest/issues",
-                "source": "https://github.com/phpnomad/rest/tree/1.0.0"
+                "source": "https://github.com/phpnomad/rest/tree/2.0.1"
             },
-            "time": "2024-12-18T16:22:49+00:00"
+            "time": "2025-01-13T21:24:08+00:00"
         },
         {
             "name": "phpnomad/singleton",
