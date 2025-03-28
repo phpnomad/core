@@ -1,7 +1,6 @@
 {
     "name": "phpnomad/core",
     "description": "",
-    "version": "1.0.0",
     "type": "library",
     "homepage": "https://github.com/phpnomad/core",
     "readme": "README.md",
@@ -38,7 +37,7 @@
         "phpnomad/event": "^1.0",
         "phpnomad/cache": "^1.0",
         "phpnomad/di": "^1.0",
-        "phpnomad/rest": "^1.0 || ^2.0",
+        "phpnomad/rest": "^2.0",
         "phpnomad/singleton": "^1.0",
         "phpnomad/facade": "^1.0",
         "phpnomad/loader": "^1.0",
