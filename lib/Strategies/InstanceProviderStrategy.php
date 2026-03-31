@@ -2,14 +2,13 @@
 
 namespace PHPNomad\Core\Strategies;
 
-use PHPNomad\Di\Container;
 use PHPNomad\Di\Interfaces\InstanceProvider;
 
 class InstanceProviderStrategy implements InstanceProvider
 {
-    protected Container $container;
+    protected InstanceProvider $container;
 
-    public function __construct(Container $container)
+    public function __construct(InstanceProvider $container)
     {
         $this->container = $container;
     }

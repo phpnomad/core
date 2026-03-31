@@ -12,6 +12,7 @@ use PHPNomad\Core\Facades\UrlResolver;
 use PHPNomad\Core\Strategies\InstanceProviderStrategy;
 use PHPNomad\Core\Strategies\Logger as LoggerStrategy;
 use PHPNomad\Di\Interfaces\CanSetContainer;
+use PHPNomad\Di\Interfaces\HasBindings;
 use PHPNomad\Di\Interfaces\InstanceProvider;
 use PHPNomad\Di\Traits\HasSettableContainer;
 use PHPNomad\Facade\Interfaces\HasFacades;
@@ -67,6 +68,8 @@ final class CoreInitializer implements HasLoadCondition, HasFacades, HasClassDef
 
     public function load(): void
     {
-        $this->container->bindSingletonFromFactory(InstanceProvider::class, fn() => new InstanceProviderStrategy($this->container));
+        if ($this->container instanceof HasBindings) {
+            $this->container->bindFactory(InstanceProvider::class, fn() => new InstanceProviderStrategy($this->container));
+        }
     }
 }
