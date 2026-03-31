@@ -2,7 +2,7 @@
     "name": "phpnomad/core",
     "description": "",
     "type": "library",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "homepage": "https://github.com/phpnomad/core",
     "readme": "README.md",
     "license": "MIT",
@@ -41,7 +41,7 @@
         "phpnomad/rest": "^2.0",
         "phpnomad/singleton": "^1.0",
         "phpnomad/facade": "^1.0",
-        "phpnomad/loader": "^1.0",
+        "phpnomad/loader": "^2.0",
         "phpnomad/logger": "^1.0",
         "ext-json": "*"
     }
